@@ -1,0 +1,67 @@
+﻿<Window x:Class="WFTracer.PriceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        FontFamily="Roboto"
+        FontWeight="Medium"
+        FontSize="16"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        WindowStyle="None"
+        BorderThickness="1"
+        AllowsTransparency="True"
+        Title="PriceWindow" 
+        Height="350" 
+        Width="270"
+        ShowInTaskbar="False"
+        MouseLeftButtonDown="DragMe">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.9" Color="#FF141414"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="Header" Grid.Row="0" Background="#121212">
+            <Label Name="WindowTitle" Content="" Foreground="#DDBDBDBD" HorizontalAlignment="Left"/>
+            <Label Name="HideApp" Content="{materialDesign:PackIcon Kind=Close}" Foreground="#DDBDBDBD" HorizontalAlignment="Right" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="HideMe" MouseEnter="HMouseEnter" MouseLeave="HMouseLeave"/>
+        </Grid>
+        
+        <DataGrid x:Name="LithGridList" Visibility="Hidden" Grid.Row="1" Background="Transparent" Foreground="#DDBDBDBD" 
+                  IsReadOnly="True" VerticalAlignment="Top" Height="315" HorizontalGridLinesBrush="#19C8C8C8" HorizontalScrollBarVisibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="LCol1" Header="Item" Width="195" Foreground="#DDBDBDBD" Binding="{Binding Item}"/>
+                <DataGridTextColumn x:Name="LCol2" Header="Price" Width="auto" Foreground="#DDBDBDBD" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid x:Name="MesoGridList" Visibility="Hidden" Grid.Row="1" Background="Transparent" Foreground="#DDBDBDBD" 
+                  IsReadOnly="True" VerticalAlignment="Top" Height="315" HorizontalGridLinesBrush="#19C8C8C8" HorizontalScrollBarVisibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="MCol1" Header="Item" Width="195" Foreground="#DDBDBDBD" Binding="{Binding Item}"/>
+                <DataGridTextColumn x:Name="MCol2" Header="Price" Width="auto" Foreground="#DDBDBDBD" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <DataGrid x:Name="NeoGridList" Visibility="Hidden" Grid.Row="1" Background="Transparent" Foreground="#DDBDBDBD" 
+                  IsReadOnly="True" VerticalAlignment="Top" Height="315" HorizontalGridLinesBrush="#19C8C8C8" HorizontalScrollBarVisibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="NCol1" Header="Item" Width="195" Foreground="#DDBDBDBD" Binding="{Binding Item}"/>
+                <DataGridTextColumn x:Name="NCol2" Header="Price" Width="auto" Foreground="#DDBDBDBD" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid x:Name="AxiGridList" Visibility="Hidden" Grid.Row="1" Background="Transparent" Foreground="#DDBDBDBD" 
+                  IsReadOnly="True" VerticalAlignment="Top" Height="315" HorizontalGridLinesBrush="#19C8C8C8" HorizontalScrollBarVisibility="Hidden">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="ACol1" Header="Item" Width="195" Foreground="#DDBDBDBD" Binding="{Binding Item}"/>
+                <DataGridTextColumn x:Name="ACol2" Header="Price" Width="auto" Foreground="#DDBDBDBD" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
