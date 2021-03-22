@@ -6,7 +6,7 @@ Run WF Tracer.exe and wait for it to load.
 
 # Screenshots
 ### News
-![News Window](/docs/images/news_dark.png) ![News Window](/docs/images/news_white.png)
+![News Window](/Docs/images/news_dark.png) ![News Window](/docs/images/news_white.png)
 
 ### Fissure
 ![Fissure Window](/docs/images/fissure_dark.png) ![Fissure Window](/docs/images/fissure_white.png)
