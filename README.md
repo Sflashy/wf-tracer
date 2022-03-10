@@ -1,5 +1,5 @@
 # Description
-description section
+No longer maintained
 
 # Usage
 Run WF Tracer.exe and wait for it to load.
